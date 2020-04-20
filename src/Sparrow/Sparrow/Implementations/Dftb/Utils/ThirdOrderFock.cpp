@@ -38,8 +38,8 @@ void ThirdOrderFock::initialize() {
 
   g = Eigen::MatrixXd::Zero(numberAtoms, numberAtoms);
   G = Eigen::MatrixXd::Zero(numberAtoms, numberAtoms);
-  dg.setDimension(numberAtoms, numberAtoms);
-  dG.setDimension(numberAtoms, numberAtoms);
+  dg.setDimension((int)numberAtoms, (int)numberAtoms);
+  dG.setDimension((int)numberAtoms, (int)numberAtoms);
 }
 
 void ThirdOrderFock::constructG(Utils::derivOrder order) {

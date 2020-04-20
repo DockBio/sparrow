@@ -25,7 +25,7 @@ Repulsion::Repulsion(const Utils::ElementTypeCollection& elements, const Utils::
 Repulsion::~Repulsion() = default;
 
 void Repulsion::initialize() {
-  nAtoms_ = elements_.size();
+  nAtoms_ = (int)elements_.size();
 
   // Create 2D-vector of empty unique_ptr's
   pairRepulsions_ = Container(nAtoms_);

@@ -72,7 +72,7 @@ class ScfFock : public Utils::ElectronicContributionCalculator {
 };
 
 inline int ScfFock::getNumberAtoms() const {
-  return elements_.size();
+  return (int)elements_.size();
 }
 
 } // namespace dftb

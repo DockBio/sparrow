@@ -36,7 +36,7 @@ void SecondOrderFock::initialize() {
   auto numberAtoms = elements_.size();
 
   G = Eigen::MatrixXd::Zero(numberAtoms, numberAtoms);
-  dG.setDimension(numberAtoms, numberAtoms);
+  dG.setDimension((int)numberAtoms, (int)numberAtoms);
 }
 
 void SecondOrderFock::constructG(Utils::derivOrder order) {

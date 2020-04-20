@@ -73,7 +73,7 @@ template<class DFTBMethod>
 void DFTBDipoleMatrixCalculator<DFTBMethod>::initialize() {
   auto nMOs = coefficientMatrix_.isRestricted() ? coefficientMatrix_.restrictedMatrix().cols()
                                                 : coefficientMatrix_.alphaMatrix().cols();
-  dipoleMatrixMO_.reset(nMOs);
+  dipoleMatrixMO_.reset((int)nMOs);
   transitionChargeMatrices_.resize(positions_.rows());
   for (auto& transitionCharge : transitionChargeMatrices_)
     transitionCharge.resize(nMOs, nMOs);
