@@ -136,6 +136,7 @@ Utils::Results GenericMethodWrapper::assembleResults(const std::string& descript
   Utils::Results results;
   results.setDescription(description);
   results.setEnergy(getLCAOMethod().getEnergy());
+  results.setMolecularOrbitals(getLCAOMethod().getMolecularOrbitals());
 
   if (requiredProperties_.containsSubSet(Utils::Property::Gradients)) {
     results.setGradients(getLCAOMethod().getGradients());

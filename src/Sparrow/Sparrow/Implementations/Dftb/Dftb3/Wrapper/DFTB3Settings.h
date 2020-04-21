@@ -24,7 +24,7 @@ class DFTB3Settings : public Scine::Utils::Settings {
   DFTB3Settings() : Settings("DFTB3Settings") {
     Utils::UniversalSettings::SettingPopulator::populateLCAOSettings(_fields);
     Utils::UniversalSettings::SettingPopulator::populateSCFSettings(_fields);
-    Utils::UniversalSettings::SettingPopulator::populateSemiEmpiricalSettings(_fields, "Dftb/3ob-2-1/");
+    Utils::UniversalSettings::SettingPopulator::populateSemiEmpiricalSettings(_fields, "");
 
     resetToDefaults();
     modifyString(Utils::SettingsNames::parameterRootDirectory, std::string(parametersRootDir));
