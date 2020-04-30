@@ -34,7 +34,7 @@ namespace Sparrow {
 
 CalculationHandler::CalculationHandler(CommandLineOptions& options, SparrowInitializer& initializer)
   : commandLineOptions_(options) {
-  Utils::Log::startConsoleLogging(commandLineOptions_.getLoggerVerbosity());
+//  Utils::Log::startConsoleLogging(commandLineOptions_.getLoggerVerbosity());
   try {
     methodWrapper_ = initializer.getManager().get<Core::Calculator>(commandLineOptions_.getSelectedMethodName());
   }
