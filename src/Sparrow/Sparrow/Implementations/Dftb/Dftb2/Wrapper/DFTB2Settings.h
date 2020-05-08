@@ -24,7 +24,7 @@ class DFTB2Settings : public Scine::Utils::Settings {
   DFTB2Settings() : Settings("DFTB2Settings") {
     Utils::UniversalSettings::SettingPopulator::populateLcaoSettings(_fields);
     Utils::UniversalSettings::SettingPopulator::populateScfSettings(_fields);
-    Utils::UniversalSettings::SettingPopulator::populateSemiEmpiricalSettings(_fields, "Dftb/mio-1-1/");
+    Utils::UniversalSettings::SettingPopulator::populateSemiEmpiricalSettings(_fields, "DFTB/mio-1-1/");
 
     resetToDefaults();
     modifyString(Utils::SettingsNames::parameterRootDirectory, std::string(parametersRootDir));
